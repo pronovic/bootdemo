@@ -22,6 +22,10 @@ dependencies {
 	testImplementation "org.springframework.boot:spring-boot-starter-test"
 }
 
+bootRun {
+   jvmArgs = ["-Dspring.profiles.active=local"]
+}
+
 test {
     useJUnitPlatform() 		// enable JUnit 5
     dependsOn 'cleanTest' 	// always run tests, even when nothing changed

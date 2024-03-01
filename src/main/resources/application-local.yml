@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: bootdemo
+
+dummy:
+  url: "http://localhost"
+  token: dummytoken
