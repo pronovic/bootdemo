@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Configuration;
 @Data
 @NoArgsConstructor
 @Configuration
-@ConfigurationProperties(ignoreUnknownFields = false, prefix = "smartthings")
-public class SmartThingsConfig {
+@ConfigurationProperties(ignoreUnknownFields = false, prefix = "dummy")
+public class DummyConfig {
     private String url;
-    private String pat;
+    private String token;
 }

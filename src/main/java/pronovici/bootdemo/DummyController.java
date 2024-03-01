@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/dummy")
 public class DummyController {
 
-    private final SmartThingsConfig config;
+    private final DummyConfig config;
 
     @GetMapping(value = "/config", produces = MediaType.TEXT_PLAIN_VALUE)
     public String retrieveConfig() {
-        return config.getUrl() + " :: " + config.getPat();
+        return config.getUrl() + " :: " + config.getToken();
     }
 }
 

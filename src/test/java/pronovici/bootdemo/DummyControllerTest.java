@@ -15,15 +15,15 @@ public class DummyControllerTest {
     private DummyController controller;
 
     @BeforeEach
-    void init(@Mock SmartThingsConfig config) {
+    void init(@Mock DummyConfig config) {
         controller = new DummyController(config);
     }
 
     @Test
     public void testConfig() {
         when(controller.getConfig().getUrl()).thenReturn("the-url");
-        when(controller.getConfig().getPat()).thenReturn("the-pat");
-        assertEquals("the-url :: the-pat", controller.retrieveConfig());
+        when(controller.getConfig().getToken()).thenReturn("the-token");
+        assertEquals("the-url :: the-token", controller.retrieveConfig());
     }
 
 }

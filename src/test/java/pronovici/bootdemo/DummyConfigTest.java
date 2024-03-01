@@ -12,16 +12,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SuppressWarnings("unused")
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@TestPropertySource(properties = { "smartthings.url=my-fancy-url", "smartthings.pat=the-token" })
-public class SmartThingsConfigTest {
+@TestPropertySource(properties = { "dummy.url=my-fancy-url", "dummy.token=the-token" })
+public class DummyConfigTest {
 
     @Autowired
-    private SmartThingsConfig config;
+    private DummyConfig config;
 
     @Test
     public void testWiring() {
         assertEquals("my-fancy-url", config.getUrl());
-        assertEquals("the-token", config.getPat());
+        assertEquals("the-token", config.getToken());
     }
 
 }
