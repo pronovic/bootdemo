@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: bootdemo
+
+smartthings:
+  url: "http://whatever"
+  pat: dummytoken
